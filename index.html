@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Portal</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="main-container">
+    <!-- Initial Sign Up or Login Container -->
+    <div class="form-container" id="initial-container">
+        <h2>Welcome to the Student Portal</h2>
+        <p>Please choose an option to get started.</p>
+        <div class="button-group">
+            <button onclick="showSignUpForm()">Sign Up</button>
+            <button onclick="showLoginOptions()">Already have an account?</button>
+        </div>
+    </div>
+
+    <!-- Sign Up Authentication Container -->
+    <div class="form-container hidden" id="signup-auth-container">
+        <h2>Create Your Account</h2>
+        <form id="auth-form" onsubmit="handleAuth(event)">
+            <div class="form-group">
+                <label for="authEmail">Email Address</label>
+                <input type="email" id="authEmail" name="authEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="authPassword">Password</label>
+                <input type="password" id="authPassword" name="authPassword" required>
+            </div>
+            <div class="form-group1">
+                <button type="submit">Continue</button>
+            </div>
+            <div class="google-auth">
+                <p>or sign up with</p>
+                <button type="button" onclick="handleGoogleAuth()">Google</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Login Authentication Container -->
+    <div class="form-container hidden" id="login-container">
+        <h2>Log In to Your Account</h2>
+        <form id="login-form" onsubmit="handleAuth(event)">
+            <div class="form-group">
+                <label for="loginEmail">Email Address</label>
+                <input type="email" id="loginEmail" name="loginEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Log In</button>
+            </div>
+            <div class="google-auth">
+                <p>or log in with</p>
+                <button type="button" onclick="handleGoogleAuth()">Google</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Full Registration Form Container -->
+    <div class="form-container hidden" id="register-container">
+        <h2>Student Registration</h2>
+        <form id="register-form" onsubmit="handleRegister(event)">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select id="course" name="course" required>
+                    <option value="">Select Course</option>
+                    <option value="science">Science</option>
+                    <option value="commerce">Commerce</option>
+                    <option value="arts">Arts</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Thank You Message Container -->
+    <div class="form-container hidden" id="thankyou-container">
+        <h2>Thank You for Registering!</h2>
+        <p>Your registration was successful. Please choose an option below.</p>
+        <div class="button-group">
+            <button onclick="logOut()">Log Out</button>
+            <button onclick="showFullForm()">Add Another Response</button>
+        </div>
+    </div>
+</div>
+
+<script src="./app.js"></script>
+</body>
+</html>

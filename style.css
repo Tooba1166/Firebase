@@ -1,0 +1,101 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(https://img.freepik.com/premium-photo/black-white-image-black-background-with-black-background-with-white-line_951962-3283.jpg) no-repeat center center/cover;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2em;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 2em;
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    margin-bottom: 1em;
+    color: #333;
+}
+
+p {
+    color: #555;
+    margin-bottom: 1.5em;
+}
+
+.button-group, .google-auth {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 4px;
+    background-color: #616365;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+    width: 100%;
+    max-width: 200px;
+}
+
+button:hover {
+    background-color: #586c81;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #444;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #555;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #434c54;
+    box-shadow: 0 0 5px rgba(253, 254, 255, 0.25);
+}
